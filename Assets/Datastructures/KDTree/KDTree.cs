@@ -320,15 +320,15 @@ namespace DataStructures.ViliWonka.KDTree {
             posNode.end = parent.end;
             parent.positiveChild = posNode;
 
-			if (negNode.Count > 0 && posNode.Count > 0) // Verify that nodes have been split
-			{
-				// Constraint function deciding if split should be continued
-				if (ContinueSplit(negNode))
-					SplitNode(negNode);
+            if (negNode.Count > 0 && posNode.Count > 0) // Verify that nodes have been split
+            {
+                // Constraint function deciding if split should be continued
+                if (ContinueSplit(negNode))
+                    SplitNode(negNode);
 
-				if (ContinueSplit(posNode))
-					SplitNode(posNode);
-			}
+                if (ContinueSplit(posNode))
+                    SplitNode(posNode);
+            }
         }
 
         /// <summary>
